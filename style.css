@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Amatic+SC:wght@700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Indie Flower', cursive;
+  background-image: url('image.jpg');
+  /* Thay thế bằng đường dẫn ảnh của bạn */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  animation: fadeIn 2s ease-out;
+}
+
+.card {
+  background: white;
+  /* Solid white background */
+  border-radius: 15px;
+  padding: 20px 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  /* Add shadow for a 3D effect */
+  max-width: 500px;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  /* Slightly enlarges the card on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  /* Slightly deeper shadow on hover */
+}
+
+.title {
+  font-family: 'Amatic SC', cursive;
+  font-size: 36px;
+  color: #ff6f91;
+  animation: slideDown 1s ease-in-out;
+}
+
+.content {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #555;
+}
+
+.signature {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #ff6f91;
+}
+
+.music-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.music-controls button {
+  background-color: #ff6f91;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.music-controls button:hover {
+  background-color: #ff3f73;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
